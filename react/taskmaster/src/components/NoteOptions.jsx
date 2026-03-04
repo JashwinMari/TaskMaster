@@ -36,6 +36,7 @@ const NoteOptions = ({tasks, setTasks, index, deletedTask, setDeletedTask, rotat
           setRotate(!rotate);
           setEditedTask(!editedTask);
           setNoteOptions(!noteOptions);
+          setLastAddedDate(tasks[index].fullDate.getFullYear()+"-"+(tasks[index].fullDate.getMonth()+1)+"-"+tasks[index].fullDate.getDate());
       } catch (error) {
           console.error("Failed to update task:", error);
       }
