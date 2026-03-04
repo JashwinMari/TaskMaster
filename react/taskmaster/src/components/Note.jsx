@@ -17,6 +17,7 @@ const Note = ({noteOptions, setNoteOptions, tasks, setTasks, index, deletedTask,
                 }),
             });
             setEditedTask(!editedTask);
+            setLastAddedDate(`${tasks[index].fullDate.getFullYear()}-${tasks[index].fullDate.getMonth()+1}-${tasks[index].fullDate.getDate()}`);
         } catch (error) {
             console.error("Failed to update task:", error);
         }
