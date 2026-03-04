@@ -6,9 +6,9 @@ import EditNote from './EditNote';
 const NoteOptions = ({tasks, setTasks, index, deletedTask, setDeletedTask, rotate, setRotate, noteOptions, setNoteOptions, editedTask, setEditedTask, lastAddedDate, setLastAddedDate}) => {
    const [showEditWindow, setShowEditWindow] = useState(false);
    const today = new Date();
-  const formatted = String(today.getDate()).padStart(2, '0') + '-' +
-                    String(today.getMonth() + 1).padStart(2, '0') + '-' +
-                    today.getFullYear();
+  const formatted = today.getFullYear()+ '-' +
+                    String(today.getMonth() + 1).padStart(2, '0')+ '-' +
+                    String(today.getDate()).padStart(2, '0');
    const deleteTask = async () => {
       try {
           await fetch(`${API_BASE_URL}/taskOp/deleteTask/${tasks[index].id}/`, {
