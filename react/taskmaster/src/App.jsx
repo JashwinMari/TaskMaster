@@ -28,7 +28,7 @@ const App = () => {
     today.setHours(0, 0, 0, 0);
     const taskDates = [];
 
-    const response = await fetch(`${API_BASE_URL}/getTasks/`, {
+    const response = await fetch(`${API_BASE_URL}/taskOp/getTasks/`, {
       method: 'GET'
     });
 

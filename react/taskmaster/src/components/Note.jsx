@@ -5,7 +5,7 @@ import NoteOptions from './NoteOptions';
 const Note = ({noteOptions, setNoteOptions, tasks, setTasks, index, deletedTask, setDeletedTask, rotate, setRotate, editedTask, setEditedTask, lastAddedDate, setLastAddedDate}) => {
     const updateTask = async () => {
         try {
-            await fetch(`${API_BASE_URL}/updateTask/${tasks[index].id}/`, {
+            await fetch(`${API_BASE_URL}/taskOp/updateTask/${tasks[index].id}/`, {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",

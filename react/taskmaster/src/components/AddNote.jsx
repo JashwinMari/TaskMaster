@@ -10,7 +10,7 @@ const AddNote = ({createNote, setCreateNote, rotate, setRotate, selDate, setSelD
   const addNoteToDB = async () => {
     try {
       const [year, month, day] = dateField.split("-").map(Number);
-      await fetch(`${API_BASE_URL}/createTask/`, {
+      await fetch(`${API_BASE_URL}/taskOp/createTask/`, {
         method: "POST", 
         headers: {
         "Content-Type": "application/json",

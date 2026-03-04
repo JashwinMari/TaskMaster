@@ -7,7 +7,7 @@ const EditNote = ({tasks, setTasks, index, rotate, setRotate, noteOptions, setNo
 
     const editTask = async () => {
         try {
-            await fetch(`${API_BASE_URL}/updateTask/${tasks[index].id}/`, {
+            await fetch(`${API_BASE_URL}/taskOp/updateTask/${tasks[index].id}/`, {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const NoteOptions = ({tasks, setTasks, index, deletedTask, setDeletedTask, rotat
    const [showEditWindow, setShowEditWindow] = useState(false);
    const deleteTask = async () => {
       try {
-          await fetch(`${API_BASE_URL}/deleteTask/${tasks[index].id}/`, {
+          await fetch(`${API_BASE_URL}/taskOp/deleteTask/${tasks[index].id}/`, {
             method: "DELETE", 
             headers: {
             "Content-Type": "application/json",
@@ -22,7 +22,7 @@ const NoteOptions = ({tasks, setTasks, index, deletedTask, setDeletedTask, rotat
     };
     const editTask = async () => {
       try {
-          await fetch(`${API_BASE_URL}/updateTask/${tasks[index].id}/`, {
+          await fetch(`${API_BASE_URL}/taskOp/updateTask/${tasks[index].id}/`, {
               method: "POST",
               headers: {
               "Content-Type": "application/json",
